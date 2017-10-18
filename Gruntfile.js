@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                     noCache: true,
                 },
                 files: {
-                    'public/assets/css/style.css': 'src/sass/style.scss'
+                    'app/assets/css/style.css': 'src/sass/style.scss'
                 }
             }
         },
@@ -126,8 +126,8 @@ module.exports = function(grunt) {
                     keepSpecialComments:0
                 },
                 files: {
-                    'public/assets/css/style.min.css': [
-                    'public/assets/css/style.css',
+                    'app/assets/css/style.min.css': [
+                    'app/assets/css/style.css',
                     ]
                 }
             }
@@ -136,8 +136,8 @@ module.exports = function(grunt) {
         // copy
         copy: {
             script: {
-                src: 'public/app/src/app.js',
-                dest: 'public/app/build/app.js'
+                src: 'app/assets/js/app.js',
+                dest: 'app/assets/js/app.js'
             },
 
             maps: {
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
                 filter: 'isFile',
                 cwd: 'source/',
                 src : '**/.html',
-                dest: 'public/'
+                dest: 'app/'
             }
         }
     });
